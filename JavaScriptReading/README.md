@@ -13,6 +13,7 @@ Know: The placement of a semicolon is incredibly important. Though JavaScript do
 Didn’t Know: In order to create a loop to go back to some point in the program, the keyword “while” can be used to start a statement. After the keyword “while”,  an expression is then placed in parentheses, followed by a statement. The loop will keep entering the statement as long as the expression is “true” in Boolean. 
 
 ##Chapter 3
+
 Know: Function binding is just assigning a name to a piece of code. 
 
 Didn’t Know: Lexical scoping is the way in which bindings are visible based on locality. The bindings that are visible are determined by the location of that block of code in the program text, since degrees of locality can be created when blocks and functions are within other blocks and functions.
