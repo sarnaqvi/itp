@@ -1,4 +1,4 @@
-###Midterm Project Documentation
+# Midterm Project Documentation
 
 click below for project:
 [midtermproject](https://editor.p5js.org/sarnaqvi/sketches/5D4qUEOmn)
@@ -43,8 +43,10 @@ function playCustomSound() {
 
 Instead of keeping the variable, myFirstSound, I used eleven new variables for each of the mp3 files I uploaded to [p5.js](https://editor.p5js.org/). My new variables were soundB, soundY, soundC, soundE, soundP, soundF, soundH, soundX, soundT, soundR, and soundV. I put these new variables in the let statement and then for the preload function, setup function, and keyPressed function. In the preload function, I copied the format of the code..
 
-` myFirstSound = loadSound('00_ann.wav', soundLoaded);
 `
+myFirstSound = loadSound('00_ann.wav', soundLoaded);
+`
+
 and copied this eleven times before replacing with my eleven new variables and the corresponding mp3 files. 
 
 For the setup function, I changed the text to include my new variables which caused some of the text to be cut off since there were so many more variables used, resulting in more text that didn't fit on the canvas properly. To combat this, I increased the canvas size slightly so it would be 500x200 pixels. I used the [p5 reference](https://p5js.org/reference/p5/createCanvas/) to help me understand this.  
@@ -75,6 +77,7 @@ function keyPressed() {
 }
 `
 The code didn't run and then I realized I missed one last bracket at the end. After adding this, there was still a problem. The code wouldn't run because there was an issue with the playCustomSound function at the end. This was the code I originally had...
+
 `
 function playCustomSound() {
   if (myFirstSound.isLoaded()) {
@@ -84,9 +87,9 @@ function playCustomSound() {
     console.log("Sound not loaded yet.");
   }
 }
-
 `
 I knew I had to change the variable myFirstSound, but I wasn't sure what I would need to change it to in order to account for all eleven of my sounds. After consulting a tutor, I learned that I needed one variable for all the sounds I wanted to use and use that to replace myFirstSound, but also I needed to define this new variable in the function by putting it in the paranthesis following playCustomSound. I changed my code to the following...
+
 `
 function playCustomSound(sound) {
   if (sound.isLoaded()) {
@@ -99,7 +102,8 @@ function playCustomSound(sound) {
 `
 Then I went back to working on the keyPressed function. When I pressed b for soundB, the mp3 file was not being played independently- another audio file was playing too. I then thought to try omitting the last else statement so that everything besides the first if statement, was an else if statement. I thought this may work because I will have multiple conditions and I don't want to default to any key by using the else statement. After changing to only else if statement and the if statement, I tested the keys and they played each audio file independtly. Then, I re-added the other variables since I had finished testing with the first three variables. My function looked like the following...
 
-`function keyPressed() {
+`
+function keyPressed() {
   console.log("Key pressed:", key);
   if (key.toLowerCase() === 'b') {
     playCustomSound(soundB);
@@ -125,10 +129,10 @@ Then I went back to working on the keyPressed function. When I pressed b for sou
     playCustomSound(soundV);
 }
 }
-
 `
 
 After these changes, my code worked and looked like the following...
+
 `
 let soundB, soundY, soundC, soundE, soundP, soundF, soundH, soundX, soundT, soundR, soundV;
 
@@ -185,8 +189,6 @@ function keyPressed() {
 }
 }
 
-
-
 function playCustomSound(sound) {
   if (sound.isLoaded()) {
     sound.play();
@@ -197,7 +199,7 @@ function playCustomSound(sound) {
 }
 `
 
-##Experimentation and Failure with Playback Rate Changes
+## Experimentation and Failure with Playback Rate Changes
 After meeting the requirements for the midterm project, I decided to try adding playback rate changes for at least one of the audio files. I used lines of code 43 to 50 from the [05Functions](https://github.com/rdwrome/261sp25/blob/main/05Functions/codealong.js) subfolder but replaced the variable myFirstSound with soundC in order to change the playback rate changes of the audio files with the chords playing. Here is what the code looked like...
 `
 function draw(){
@@ -213,6 +215,7 @@ Though the playback rate changed did work, the canvas for this blocked the text 
 
 
 Here is the code from the p5 reference...
+
 `
 // Function for first canvas
 function sketch1(p) {
@@ -246,7 +249,8 @@ new p5(sketch2);
 `
 
 And here is how I tried to change it for two canvases, one with writing and one with playback rate change control. I just tried to keep one canvas  the same as the setup function lines of code for the text and then made the second canvas with the playback rate changes code from the 05 subfolder as previously shown..
-`// Function for first canvas
+
+`
 function sketch1(p) {
   
   p.setup=function draw(){
@@ -280,8 +284,6 @@ function sketch2(p) {
   };
  
 }
-
-// Run second p5 instance
 new p5(sketch2);
 `
 
