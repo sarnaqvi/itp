@@ -130,7 +130,6 @@ After these changes, my code worked and looked like the following...
 
 `
 let soundB, soundY, soundC, soundE, soundP, soundF, soundH, soundX, soundT, soundR, soundV;
-
 function preload() {
   soundFormats('wav', 'mp3');  
   soundB = loadSound('Bag.mp3', soundLoaded);
@@ -145,18 +144,15 @@ function preload() {
   soundR = loadSound('ReverbFlute.mp3', soundLoaded);
   soundV = loadSound('VitalInt.mp3', soundLoaded);
 }
-
 function setup() {
   createCanvas(500, 200);
   textSize(20);
   textAlign(CENTER, CENTER);
   text("Move your cursor to the 'Preview' section\nPress 'B, Y, C, E, P, F, H, X, T, R, or V' to play sounds", width / 2, height / 2);
 }
-
 function soundLoaded() {
   console.log("Sound successfully loaded!");
 }
-
 function keyPressed() {
   console.log("Key pressed:", key);
   if (key.toLowerCase() === 'b') {
@@ -183,7 +179,6 @@ function keyPressed() {
     playCustomSound(soundV);
 }
 }
-
 function playCustomSound(sound) {
   if (sound.isLoaded()) {
     sound.play();
@@ -222,10 +217,8 @@ function sketch1(p) {
     p.circle(p.mouseX, p.mouseY, 50);
   };
 }
-
 // Run first p5 instance
 new p5(sketch1);
-
 // Function for second canvas
 function sketch2(p) {
   p.setup = function () {
@@ -238,7 +231,6 @@ function sketch2(p) {
     p.square(p.mouseX, p.mouseY, 50);
   };
 }
-
 // Run second p5 instance
 new p5(sketch2);
 `
@@ -247,12 +239,10 @@ And here is how I tried to change it for two canvases, one with writing and one 
 
 `
 function sketch1(p) {
-  
   p.setup=function draw(){
   p.background(0);
   let mouseXNormalized = map (mouseX, 0, width, 0.5, 2.0);
   soundC.rate(mouseXNormalized);
-  
   fill(255);
   text('rate: ' + mouseXNormalized.toFixed(2), 20,20);
 };
@@ -260,12 +250,9 @@ function sketch1(p) {
     p.createCanvas(200, 200);
     p.background(0);
   };
- 
 }
-
 // Run first p5 instance
 new p5(sketch1);
-
 // Function for second canvas
 function sketch2(p) {
   p.setup = function () {
@@ -275,9 +262,7 @@ function sketch2(p) {
   textAlign(CENTER, CENTER);
   text("Move your cursor to the 'Preview' section\nPress 'B, Y, C, E, P, F, H, X, T, R, or V' to play sounds", width / 2, height / 2);
 }
-    
   };
- 
 }
 new p5(sketch2);
 `
