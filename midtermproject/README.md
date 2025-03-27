@@ -7,30 +7,25 @@ I started by using the code in lines 54 to 86 in the codealong.js file in the [0
 
 `
 let myFirstSound;
-
 function preload() {
   soundFormats('wav', 'mp3');  
   myFirstSound = loadSound('00_ann.wav', soundLoaded);
 }
-
 function setup() {
   createCanvas(400, 200);
   textSize(20);
   textAlign(CENTER, CENTER);
   text("Move your cursor to the 'Preview' section\nPress 'P' to play sound", width / 2, height / 2);
 }
-
 function soundLoaded() {
   console.log("Sound successfully loaded!");
 }
-
 function keyPressed() {
   console.log("Key pressed:", key);
   if (key.toLowerCase() === 'p') {
     playCustomSound();
   }
 }
-
 function playCustomSound() {
   if (myFirstSound.isLoaded()) {
     myFirstSound.play();
