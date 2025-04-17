@@ -6,6 +6,7 @@ We started by using the sample website as a [template](https://kariestes.github.
 
 ## Problem
 We made sure to make our own styles.css file and we wanted to make an image a background for our website instead of just a basic color. We had some issues with getting our image to show as the background because we tried using a url of the image from the internet. Even though we had put the image in the same folder as our index.html file it wasnt working. So then we checked a [source online](https://www.w3schools.com/css/css_background_image.asp) for help and realized we should just use the name of the image file exactly as it was in the folder on our computer. The the image worked for our background. This is what it looked like in our css file...
+
 `
 body {
   background-image: url("free-nature-images.jpg");
