@@ -14,9 +14,7 @@ For the resume tab I just wanted to keep it professional and simple without any 
 
 ### Resume Tab Problems
 I was unhappy with my text sizing and felt that it was too small and I wanted to have more control over the sizing so I used a [Geeks For Geeks](https://www.geeksforgeeks.org/how-to-change-the-font-size-in-html/) page to get the tag for this. Here is the code for this...
-<pre>
-<div style="font-size: 20px;">
-</pre>
+
 
 ## Contact Tab
 For my fourth tab, I just wanted to make a simple contact page. For this page I referenced the [phone tab from Dr. Rome's website](https://racheldevorah.studio/).  I made a new contact.html file, updated the navigation section with it, and then finished off the page with a simple image and my phone number and email. 
