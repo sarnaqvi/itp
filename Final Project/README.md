@@ -1,7 +1,7 @@
 # Final Project Documentation
 [My Website](https://sarnaqvi.github.io)
 
-##Getting Started + CSS File
+## Getting Started + CSS File
 I started by making the index.html file and using [Dr. Rome's website](https://racheldevorah.studio) as a template. I took the code from the "about" page from Dr. Rome's webiste and started customizing from there. In order to customize the code to fit my needs, I made my own styless.css file and made sure to put it into the same folder as the index.html file. I wanted to pick my own colors and different font for my website so I used W3Schools page on [CSS Colors](https://www.w3schools.com/cssref/css_colors.php) and their page on [CSS Fonts](https://www.w3schools.com/css/css_font.asp) in order to know what to fill in the code to get a beige sort of background and Lucia font. After taking care of the CSS file, I went back to the index.html file and changed the words to make sense for my own website. For this introductory about page I just wanted to have a picture of me and some text at the bottom so I followed the template and used the image tag and made sure to put the image I wanted to use within the same folder. 
 ## Music Tab
 After completing the About page I made another html file called music.html and added it to the website folder. This page was a bit more complicated because I wanted to add a couple audio files and a video. I noticed Dr. Rome's website had some videos on the [oeuvre page](https://racheldevorah.studio/oeuvre/) so I used the code from here for some guidance. I added my link to the music html file in the navigation section, added a picture and then went on to adding the audio files using the audio controls tag that I learned about from the [W3Schools HTML Audio site](https://www.w3schools.com/html/html5_audio.asp). I also used the [W3Schools HTML Video page](https://www.w3schools.com/html/html5_video.asp) for help with implementing a short performance video. I uploaded the audio files and videos I wanted to use in the same website folder so they could be called on. 
@@ -22,10 +22,7 @@ I was unhappy with my text sizing and felt that it was too small and I wanted to
 For my fourth tab, I just wanted to make a simple contact page. For this page I referenced the [phone tab from Dr. Rome's website](https://racheldevorah.studio/).  I made a new contact.html file, updated the navigation section with it, and then finished off the page with a simple image and my phone number and email. 
 
 ### Contact Tab Problems
-My image for this page was way too big so I just adjusted the width and height to width=400 and height=500 by using another [W3Schools resource on image sizing](https://www.w3schools.com/tags/att_img_width.asp). Here is the code for this...
-`
-<img src="flutepicctm.jpg" width="400" height="500">
-`
+My image for this page was way too big so I just adjusted the width and height to width=400 and height=500 by using another [W3Schools resource on image sizing](https://www.w3schools.com/tags/att_img_width.asp). 
 
 # Final Presentation Section
 My project is a website called "Sarah Naqvi Portfolio". 
